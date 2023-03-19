@@ -1,0 +1,153 @@
+/* Form */
+
+.wrapper_2 {
+  position: fixed;
+  top: 20%;
+  height: 27rem;
+  width: 60rem;
+  border: 2px solid #ffffff80;
+  border-radius: 25px;
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 30px #00000080;
+  overflow: hidden;
+  z-index: 10;
+  transition-duration: 0.5s;
+}
+
+
+.wrapper_2 .add_note_box {
+  padding: 4rem;
+  width: 100%;
+}
+@media screen and (100px < width < 690px) {
+  .wrapper_2 {
+    width: 90vw;
+    
+  }
+  .wrapper_2 .add_note_box {
+    padding: 1rem;
+  }
+}
+@media screen and (690px < width < 1100px) {
+  .wrapper_2 {
+    width: 90vw;
+  }
+}
+
+.wrapper_2 .add_note_box .close_btn {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  background-color: #ec9819;
+  padding: 20px;
+  font-size: 1.2em;
+  border-bottom-left-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+.wrapper_2 .add_note_box .close_btn:hover {
+  background-color: rgba(255, 255, 255, 0.267);
+  color: #ec9819;
+}
+.add_note_box h2 {
+  text-align: center;
+  font-size: 2em;
+  color: orangered;
+}
+form .input_box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+
+  margin: 1.5rem 0rem 2rem 0rem;
+}
+form .input_box input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: #162938;
+  font-size: 1.1em;
+  border-bottom: 2px solid #162938;
+}
+form .input_box .icon {
+  position: absolute;
+  right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+form .input_box label {
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  font-size: 1.1em;
+  color: #162938;
+  font-weight: 600;
+  transform: translateY(-50%);
+  transition: all 0.4s;
+}
+.add_note_box .input_box input:focus ~ label,
+.add_note_box .input_box input:valid ~ label {
+  top: -5px;
+  color: #ec9819;
+}
+.input_box input:valid sz {
+  top: -5px;
+  color: red;
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(-50px);
+  }
+  25% {
+    transform: translateX(1px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(1px);
+  }
+}
+
+form .btn {
+  width: 100%;
+  height: 45px;
+  margin-bottom: 1rem;
+  border: none;
+  background-color: #ec9819;
+  outline: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.1em;
+  color: white;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+form .btn:hover {
+  background-color: rgba(255, 255, 255, 0.267);
+  color: #ec9819;
+}
+
+form .login_register p {
+  font-size: 1.09em;
+  color: #162938;
+}
+form .login_register p span {
+  margin-left: 0.5rem;
+  text-decoration: none;
+  color: #ec9819;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+form .login_register p span:hover {
+  text-decoration: underline;
+  color: white;
+}
